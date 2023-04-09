@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=League+Gothic&family=M+PLUS+1+Code:wght@300&family=Mohave&family=Montserrat:wght@100&family=Noto+Sans+JP:wght@300&family=Open+Sans:wght@300&family=Raleway:wght@100;200;300&family=Red+Hat+Mono:wght@300;400&family=Roboto:wght@100&family=Titillium+Web:wght@200&family=Ubuntu:ital,wght@1,300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "M PLUS 1 Code", sans-serif;
+  box-sizing: border-box;
+  font-weight: 300;
+}
+
+body {
+  height: 100vh;
+  background: url(/image/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+h1 {
+  transform: translateY(150px);
+}
+
+.container {
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transform: scale(1);
+}
+.container.grow {
+  animation: grow 3s linear forwards;
+}
+.container.shrink {
+  animation: shrink 3s linear forwards;
+}
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+@keyframes shrink {
+  0% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.container .circle {
+  width: 100%;
+  height: 100%;
+  background-color: #6ca7ff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  z-index: -1;
+}
+.container #text {
+  font-size: 1.3rem;
+}
+.container .pointer-container {
+  width: 20px;
+  height: 240px;
+  position: absolute;
+  top: -90px;
+  left: 140px;
+  animation: rotate 7500ms linear infinite;
+  transform-origin: bottom center;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.container .pointer-container .pointer {
+  width: 30px;
+  height: 30px;
+  background-color: #0235ff;
+  border-radius: 50%;
+}
+.container .outer-circle {
+  width: 350px;
+  height: 350px;
+  background: conic-gradient(#404792 0%, #779ccf 40%, #fff 40%, #fff 60%, #184f9c 60%, #0c274e 100%);
+  border-radius: 50%;
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  z-index: -2;
+}/*# sourceMappingURL=style.css.map */
